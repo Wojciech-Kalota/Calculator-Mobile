@@ -145,7 +145,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        var maxi = 10.0.pow(maxOf(oneDotMultiplier, twoDotMultiplier)).toLong()
+        val maxi = 10.0.pow(maxOf(oneDotMultiplier, twoDotMultiplier)).toLong()
+
+
+        if(oneDotMultiplier == 0){
+            one = (one.toLong() * maxi).toString()
+        }
+        if(twoDotMultiplier == 0){
+            two = (two.toLong() * maxi).toString()
+        }
 
         return Triple(one, two, maxi)
     }
